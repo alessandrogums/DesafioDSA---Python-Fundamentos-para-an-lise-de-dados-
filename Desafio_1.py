@@ -12,7 +12,7 @@ def Caracteres_unicos(string):
         return True 
 
       
-# Segunda forma 
+# segunda forma 
 
 def Caracteres_unicos(string):
     if string is None:
@@ -24,6 +24,7 @@ def Caracteres_unicos(string):
         return True 
 
 #terceira forma 
+
 def Caracteres_unicos(string):
   if string is None:
     return False
