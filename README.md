@@ -9,5 +9,4 @@
  ### Implementar um algoritmo para mover um robô do canto superior esquerdo para o canto inferior direito de uma grade.
 ###  Desafio número 4:
  ### Implementar o Algoritmo de ordenação "Selection Sort".
- ### Desafio número 5: 
- ### Analisar o comportamrnto de compra dos consumidores. 
+
