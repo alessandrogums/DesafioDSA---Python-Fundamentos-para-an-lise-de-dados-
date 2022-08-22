@@ -18,7 +18,6 @@ for r in matrix:
 def move_robot(matrix,max_lin,max_col):
     caminho=[(0,0)]
     lin,col=0,0
-    invalid=False 
     
     while True:
 
@@ -75,6 +74,7 @@ def move_robot(matrix,max_lin,max_col):
             else:
                 caminho=caminho[:-a-1]
                 lin,col=pos_ini_x,pos_ini_y
+                a=False 
             
         
 
