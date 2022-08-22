@@ -7,6 +7,10 @@
  ### Gerar uma lista de números primos.
 ###  Desafio número 3 :
  ### Implementar um algoritmo para mover um robô do canto superior esquerdo para o canto inferior direito de uma grade.
+ ### OBS: O robô só pode se mover para a direita e para baixo
+ ### Adicionais à questão:
+    ### retornar o número de caminhos quando existir algum bloqueio
+    ### Retornar inválido quando não houver solução
 ###  Desafio número 4:
  ### Implementar o Algoritmo de ordenação "Selection Sort".
 
