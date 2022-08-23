@@ -14,14 +14,13 @@ for r in matrix:
     print(r)
 
 
-
 def move_robot(matrix,max_lin,max_col):
     caminho=[(0,0)]
     lin,col=0,0
     
     while True:
 
-        while  (matrix[lin+1][col] !=0 or matrix[lin][col+1] !=0):
+        while  lin <=max_lin-1 and col <=max_col-1  and  (matrix[lin+1][col] !=0 or matrix[lin][col+1] !=0):
             
            
             if matrix[lin+1][col] != 0:
@@ -31,18 +30,17 @@ def move_robot(matrix,max_lin,max_col):
 
             pos=(lin,col)
             caminho.append(pos)
+        
+        x,y=lin,col
+        
+        while lin==max_lin and matrix[lin][y]==1 and y<max_col:
+            y+=1
+            caminho.append((lin,y))
 
+        while col==max_col and matrix[y][col]==1 and x<max_lin:
+            x+=1
+            caminho.append((x,col))
 
-            if col==max_col :
-                aval=[(x,col) for x in range (lin+1,max_lin+1) if matrix[x][col]==1]
-                caminho.extend(aval)
-                break
-                
-            
-            if lin == max_lin :
-                aval=[(lin,y) for y in range(col+1,max_col+1) if matrix[lin][x]==1]
-                caminho.extend(aval)
-                break
         
         if caminho[-1] == (max_lin,max_col):
             break
@@ -51,11 +49,11 @@ def move_robot(matrix,max_lin,max_col):
             temp=caminho[-1]
             matrix[temp[0]][temp[1]]=0
             caminho_inv=caminho[::-1]
-            a=False
+            p=False
             for k in range(len(caminho_inv)-1):
                 var_act=caminho_inv[k]
                 var_ant=caminho_inv[k+1]
-               
+                p=True
                 diff_lin,diff_col=var_act[0]-var_ant[0], var_act[1]-var_ant[1]
                 
                 if diff_lin==1 and  0<= var_ant[1]+1 <= max_col  and matrix[var_ant[0]][var_ant[1] + 1] != 0:
@@ -69,19 +67,15 @@ def move_robot(matrix,max_lin,max_col):
                 else:
                     matrix[var_act[0]][var_act[1]]=0
             
-            if a==False:
-              return 'Não há possibilidades'
+            if p==False:
+                return 'não há caminhos possíveis'
             else:
                 caminho=caminho[:-a-1]
                 lin,col=pos_ini_x,pos_ini_y
-                a=False 
+            
             
         
 
     return caminho 
 
 
-
-
-x=move_robot(matrix=matrix,max_lin=7,max_col=3)
-print(x)
