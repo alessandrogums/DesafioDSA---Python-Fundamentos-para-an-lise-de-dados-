@@ -9,7 +9,7 @@
  ### Implementar um algoritmo para mover um robô do canto superior esquerdo para o canto inferior direito de uma grade.
  ### OBS: O robô só pode se mover para a direita e para baixo
  ### Adicionais à questão:
-        Retornar o número de caminhos quando existir algum bloqueio
+        Retornar o número de caminhos quando existir algum bloqueio, deixando esses inválidados
         Retornar inválido quando não houver solução
 ###  Desafio número 4:
  ### Implementar o Algoritmo de ordenação "Selection Sort".
