@@ -1,4 +1,4 @@
-class SelectionSort(object):
+class BubbleSort(object):
     def __init__(self,vetor):
         self.vetor=vetor
 
