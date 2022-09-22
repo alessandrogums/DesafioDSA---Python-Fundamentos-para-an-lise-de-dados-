@@ -12,5 +12,5 @@
         Retornar o número de caminhos quando existir algum bloqueio, deixando esses invalidados
         Retornar inválido quando não houver solução
 ###  Desafio número 4:
- ### Implementar o Algoritmo de ordenação "Selection Sort".
+ ### Implementar o Algoritmo de ordenação "BubbleSort".
 
